@@ -2,6 +2,18 @@
 
 SpendWise is a modern, responsive personal finance dashboard that helps users track income, monitor expenses, manage budgets, and understand their spending habits through interactive charts.
 
+
+
+## 🚀 Live Demo
+
+**Try SpendWise here:**
+
+[https://spendwise-red-two.vercel.app/](https://spendwise-red-two.vercel.app/)
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-00C896?style=for-the-badge&logo=vercel&logoColor=white)](https://spendwise-red-two.vercel.app/)
+
+
+
 ## Features
 
 - **Dashboard:** View your financial overview, including balance, income, expenses, and budget.
