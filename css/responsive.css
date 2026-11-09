@@ -1,0 +1,416 @@
+/* =========================================
+   SPENDWISE — RESPONSIVE DESIGN
+========================================= */
+
+/* =========================================
+   1. LARGE LAPTOPS
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .main-content {
+        padding: 0 24px;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: minmax(0, 1.4fr) minmax(230px, 1fr);
+        gap: 16px;
+    }
+
+    .summary-card {
+        padding: 19px;
+    }
+
+}
+
+
+/* =========================================
+   2. TABLETS AND SMALL LAPTOPS
+========================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+        --sidebar-width: 230px;
+    }
+
+    .main-content {
+        padding: 0 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-chart-container {
+        max-width: 250px;
+    }
+
+    .top-header {
+        height: 72px;
+    }
+
+    .page-section {
+        padding-top: 28px;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   3. MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: min(290px, 85vw);
+        transform: translateX(-105%);
+        transition: transform 0.3s ease;
+        z-index: 110;
+        box-shadow: none;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 20px 0 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .close-sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .close-sidebar:hover {
+        background: var(--surface-hover);
+        color: var(--text-primary);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 0 18px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle:hover {
+        background: var(--surface-hover);
+        color: var(--text-primary);
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(3px);
+        z-index: 105;
+    }
+
+    .top-header {
+        height: 70px;
+    }
+
+    .header-left,
+    .header-right {
+        gap: 12px;
+    }
+
+    .header-date {
+        display: none;
+    }
+
+    .page-section {
+        padding-top: 27px;
+    }
+
+    .page-heading {
+        margin-bottom: 24px;
+    }
+
+    .page-heading h1 {
+        font-size: 23px;
+    }
+
+    .app-footer {
+        padding: 18px 8px;
+    }
+
+}
+
+
+/* =========================================
+   4. SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 550px) {
+
+    .main-content {
+        padding: 0 14px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .page-heading .primary-button {
+        width: 100%;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .summary-card {
+        padding: 15px;
+        border-radius: 13px;
+    }
+
+    .card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 14px;
+    }
+
+    .card-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .card-label {
+        font-size: 11px;
+    }
+
+    .summary-card h2 {
+        font-size: 17px;
+        letter-spacing: -0.5px;
+    }
+
+    .card-description {
+        font-size: 10px;
+    }
+
+    .content-card {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .section-header h3 {
+        font-size: 13px;
+    }
+
+    .section-header p {
+        font-size: 10px;
+    }
+
+    .select-control {
+        max-width: 100%;
+    }
+
+    .chart-container {
+        height: 225px;
+    }
+
+    .category-chart-container {
+        height: 190px;
+        max-width: 220px;
+    }
+
+    .category-legend {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+    }
+
+    .budget-details {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .budget-details h2 {
+        font-size: 19px;
+    }
+
+    .budget-details h3 {
+        font-size: 14px;
+    }
+
+    .budget-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .transactions-table th,
+    .transactions-table td {
+        padding: 12px 10px;
+    }
+
+    .transaction-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .transaction-toolbar input,
+    .transaction-toolbar .select-control {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .modal-overlay {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .modal {
+        max-height: 92vh;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .modal-header h2 {
+        font-size: 17px;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+        gap: 9px;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+
+    .type-selector {
+        gap: 8px;
+    }
+
+    .app-footer {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   5. VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .main-content {
+        padding: 0 11px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 17px;
+    }
+
+    .card-top {
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 12px;
+    }
+
+    .summary-card h2 {
+        font-size: 21px;
+    }
+
+    .breadcrumb {
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .header-left,
+    .header-right {
+        gap: 8px;
+    }
+
+    .page-heading h1 {
+        font-size: 20px;
+    }
+
+    .content-card {
+        padding: 14px;
+    }
+
+    .category-legend {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   6. LANDSCAPE MOBILE
+========================================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .sidebar {
+        overflow-y: auto;
+    }
+
+    .sidebar-header {
+        min-height: 65px;
+    }
+
+    .sidebar-content {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+}
+
+
+/* =========================================
+   7. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
